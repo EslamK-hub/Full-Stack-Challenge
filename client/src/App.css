@@ -1,0 +1,391 @@
+/* --------------------------------- Global --------------------------------- */
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Excon", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbe497;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0f3f57;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* --------------------------------- Home --------------------------------- */
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    gap: 10px;
+}
+
+/* --------------------------------- Dashboard --------------------------------- */
+.dashboard {
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100%;
+}
+
+/* --------------------------------- Sidebar --------------------------------- */
+.left {
+    width: 280px;
+    background-color: #dbe497;
+    padding: 20px 0;
+    transition: 0.3s;
+}
+
+.small-left {
+    width: 0;
+    transition: 0.3s;
+}
+
+.logo-container {
+    color: #0f3f57;
+    text-align: center;
+}
+
+ul {
+    margin-top: 50px;
+}
+
+li {
+    list-style: none;
+    transition: 0.3s;
+}
+
+li:nth-child(1) {
+    background-color: #f1f4d3;
+}
+
+li a {
+    padding: 18px 20px;
+    color: #0f3f57;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+li:nth-child(1) a {
+    color: #0f3f57;
+}
+
+li:hover {
+    background-color: #f1f4d3;
+}
+
+li:hover a {
+    color: #0f3f57;
+}
+
+/* --------------------------------- Main Content --------------------------------- */
+.right {
+    width: 100%;
+    background-color: #f1f4d3;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: start;
+    gap: 10px;
+    color: #0f3f57;
+}
+
+.nav-left h2 {
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f4d3;
+    width: 200px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.search label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    gap: 10px;
+}
+
+.notice .notification,
+.notice .email {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice .notification::before,
+.notice .email::before {
+    content: "2";
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    text-align: center;
+    align-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #dd5b5b;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.notice img {
+    width: 40px;
+}
+
+section {
+    width: 100%;
+}
+
+.section-container {
+    margin: 20px 20px;
+}
+
+.exam-content {
+    width: 100%;
+    height: fit-content;
+    background: white;
+    padding: 18px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.exam-content div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exam-content h1 {
+    font-size: 30px;
+    color: #0f3f57;
+}
+
+.exam-content p {
+    font-size: 16px;
+    color: #9b9b9b;
+}
+
+.exam-content i {
+    font-size: 16px;
+    color: #bbbbbb;
+}
+
+.exam-content .img {
+    width: 350px;
+}
+
+.exam-content img {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: grid;
+    grid-column: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.announcement-container {
+    grid-area: 1 / 1 / 6 / 4;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header span {
+    color: #0f3f57;
+    font-weight: 700;
+}
+
+.announcement {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.announcement div {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.announcement img {
+    width: 50px;
+    height: 50px;
+}
+
+.announcement h4 {
+    font-size: 16px;
+    color: #0f3f57;
+}
+
+.announcement h4 small {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9b9b9b;
+}
+
+.announcement p {
+    width: 80%;
+    font-size: 100%;
+    color: #9b9b9b;
+}
+
+.quiz-container {
+    grid-area: 1 / 4 / 6 / 6;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quiz-container p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9b9b9b;
+    margin-bottom: 10px;
+}
+
+.quiz {
+    width: 100%;
+}
+
+.quiz-content {
+    background-color: #f1f4d3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.quiz-content div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quiz-content h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9b9b9b;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 901px) {
+    .nav-right {
+        width: 50%;
+    }
+}
+
+@media (max-width: 690px) {
+    nav {
+        display: block;
+    }
+    .nav-right {
+        width: 100%;
+    }
+    .exam-content {
+        display: block;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .announcement div {
+        display: block;
+    }
+}
